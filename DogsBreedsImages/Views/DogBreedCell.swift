@@ -32,15 +32,15 @@ struct DogBreedCell: View {
             Text(text.capitalized)
                 .font(.subheadline)
                 .frame(maxWidth: .infinity, maxHeight:.infinity)
-                .background(.cyan)
+                .background(Color(UIColor.systemGray))
                 .foregroundColor(.white)
         }
         .padding(.vertical)
-        .background(.cyan)
+        .background(Color(UIColor.systemGray))
         .clipShape(RoundedRectangle(cornerRadius: 10))
         .overlay(
             RoundedRectangle(cornerRadius: 10)
-                .stroke(.gray)
+                .stroke(Color(UIColor.white))
         )
     }
 }

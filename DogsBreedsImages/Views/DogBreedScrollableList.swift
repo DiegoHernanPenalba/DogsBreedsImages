@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DogBreedScrollableList: View {
-    @StateObject var viewModel: DogBreedViewModel
+    @ObservedObject var viewModel: DogBreedViewModel
     @State private var searchText = ""
     
     let twoColumnsGrid = [GridItem(.flexible()), GridItem(.flexible())]
@@ -52,7 +52,7 @@ struct DogBreedScrollableList: View {
             }
         }
         .navigationBarTitle("Dog Breeds")
-        .background(.gray)
+        .background(Color(UIColor.systemBackground))
         .onAppear {
             Task {
                 await viewModel.fetchBreeds()

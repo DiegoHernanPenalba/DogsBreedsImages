@@ -26,7 +26,7 @@ struct DogBreedDetailView: View {
             }
         }
         .navigationTitle(breed.name.capitalized)
-        .background(.gray)
+        .background(Color(.tertiarySystemBackground))
     }
 }
 
