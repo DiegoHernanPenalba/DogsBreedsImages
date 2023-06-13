@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DogBreedScrollableList: View {
-    @StateObject var viewModel: BreedViewModel
+    @StateObject var viewModel: DogBreedViewModel
     @State private var searchText = ""
     
     let twoColumnsGrid = [GridItem(.flexible()), GridItem(.flexible())]
@@ -54,6 +54,6 @@ struct DogBreedScrollableList: View {
 
 struct BreedListView_Previews: PreviewProvider {
     static var previews: some View {
-        DogBreedScrollableList(viewModel: BreedViewModel())
+        DogBreedScrollableList(viewModel: DogBreedViewModel())
     }
 }

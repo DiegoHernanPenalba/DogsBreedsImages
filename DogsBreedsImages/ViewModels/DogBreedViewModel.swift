@@ -3,14 +3,14 @@ import SwiftUI
 import Combine
 import Alamofire
 
-class BreedViewModel: ObservableObject {
+class DogBreedViewModel: ObservableObject {
     @Published var breeds: [DogBreed] = []
     private var cancellables: Set<AnyCancellable> = []
     
     func fetchBreeds() async {
         Task {
             do {
-                let breeds = try await DogAPI.shared.fetchBreeds()
+                let breeds = try await DogBreedsAPI.shared.fetchBreeds()
                 DispatchQueue.main.async {
                     self.breeds = breeds.map { DogBreed(name: $0) }
                     Task {
@@ -28,7 +28,7 @@ class BreedViewModel: ObservableObject {
             let breed = breeds[index]
             Task {
                 do {
-                    let imageURL = try await DogAPI.shared.getRandomImageURL(for: breed.name)
+                    let imageURL = try await DogBreedsAPI.shared.getRandomImageURL(for: breed.name)
                     DispatchQueue.main.async {
                         if let breedIndex = self.breeds.firstIndex(where: { $0.id == breed.id }) {
                             self.breeds[breedIndex].images.append(imageURL)

@@ -13,8 +13,8 @@ enum APIError: Error {
     case decodingFailed
 }
 
-struct DogAPI {
-    static let shared = DogAPI()
+struct DogBreedsAPI {
+    static let shared = DogBreedsAPI()
     
     private let baseURL = "https://dog.ceo/api"
     

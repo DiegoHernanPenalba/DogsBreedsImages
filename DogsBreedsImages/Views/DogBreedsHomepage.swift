@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DogBreedsHomepage: View {
-    @StateObject private var viewModel = BreedViewModel()
+    @StateObject private var viewModel = DogBreedViewModel()
     
     var body: some View {
         NavigationView {
