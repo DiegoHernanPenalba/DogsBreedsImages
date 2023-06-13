@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BreedDetailView: View {
+struct DogBreedDetailView: View {
     let breed: DogBreed
     
     var body: some View {
@@ -32,6 +32,6 @@ struct BreedDetailView: View {
 
 struct BreedDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        BreedDetailView(breed: DogBreed(name: "Beagle"))
+        DogBreedDetailView(breed: DogBreed(name: "Beagle"))
     }
 }

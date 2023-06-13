@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BreedListView: View {
+struct DogBreedScrollableList: View {
     @StateObject var viewModel: BreedViewModel
     @State private var searchText = ""
     
@@ -33,7 +33,7 @@ struct BreedListView: View {
                 
                 LazyVGrid(columns: twoColumnsGrid, spacing: 10) {
                     ForEach(filteredBreeds) { breed in
-                        NavigationLink(destination: BreedDetailView(breed: breed)) {
+                        NavigationLink(destination: DogBreedDetailView(breed: breed)) {
                             DogBreedCell(imageURL: breed.images.randomElement() ?? "", text: breed.name)
                         }
                     }
@@ -54,6 +54,6 @@ struct BreedListView: View {
 
 struct BreedListView_Previews: PreviewProvider {
     static var previews: some View {
-        BreedListView(viewModel: BreedViewModel())
+        DogBreedScrollableList(viewModel: BreedViewModel())
     }
 }

@@ -12,7 +12,7 @@ struct DogBreedsHomepage: View {
     
     var body: some View {
         NavigationView {
-            BreedListView(viewModel: viewModel)
+            DogBreedScrollableList(viewModel: viewModel)
         }
     }
 }
