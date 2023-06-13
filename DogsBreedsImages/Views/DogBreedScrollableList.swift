@@ -34,16 +34,25 @@ struct DogBreedScrollableList: View {
                 LazyVGrid(columns: twoColumnsGrid, spacing: 10) {
                     ForEach(filteredBreeds) { breed in
                         NavigationLink(destination: DogBreedDetailView(breed: breed)) {
-                            DogBreedCell(imageURL: breed.images.randomElement() ?? "", text: breed.name)
+                            if let imageURL = breed.images.randomElement() {
+                                DogBreedCell(imageURL: imageURL, text: breed.name)
+                            } else {
+                                DogBreedCell(imageURL: "", text: breed.name)
+                            }
                         }
                     }
                 }
                 .padding()
-                .background(.gray)
+                .background(Color.gray.opacity(0.1))
+                
+                if let errorMessage = viewModel.errorMessage {
+                    Text(errorMessage)
+                        .foregroundColor(.red)
+                        .padding(.top)
+                }
             }
         }
         .navigationBarTitle("Dog Breeds")
-        .background(.gray)
         .onAppear {
             Task {
                 await viewModel.fetchBreeds()
@@ -51,7 +60,6 @@ struct DogBreedScrollableList: View {
         }
     }
 }
-
 struct BreedListView_Previews: PreviewProvider {
     static var previews: some View {
         DogBreedScrollableList(viewModel: DogBreedViewModel())

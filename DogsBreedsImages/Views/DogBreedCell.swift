@@ -8,20 +8,27 @@
 import SwiftUI
 
 struct DogBreedCell: View {
-    let imageURL: String
+    let imageURL: String?
     let text: String
     
     var body: some View {
         VStack {
-            AsyncImage(url: URL(string: imageURL)) { image in
-                image
+            if let imageURL = imageURL {
+                AsyncImage(url: URL(string: imageURL)) { image in
+                    image
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 100, height: 100)
+                } placeholder: {
+                    ProgressView()
+                }
+                .padding()
+            } else {
+                Image(systemName: "questionmark")
                     .resizable()
-                    .scaledToFill()
-                    .frame(width: 100, height: 100)
-            } placeholder: {
-                ProgressView()
+                    .aspectRatio(contentMode: .fit)
+                    .cornerRadius(10)
             }
-            .padding()
             Text(text.capitalized)
                 .font(.subheadline)
                 .frame(maxWidth: .infinity, maxHeight:.infinity)
