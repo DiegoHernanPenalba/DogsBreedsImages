@@ -43,7 +43,6 @@ struct DogBreedScrollableList: View {
                     }
                 }
                 .padding()
-                .background(Color.gray.opacity(0.1))
                 
                 if let errorMessage = viewModel.errorMessage {
                     Text(errorMessage)
@@ -53,6 +52,7 @@ struct DogBreedScrollableList: View {
             }
         }
         .navigationBarTitle("Dog Breeds")
+        .background(.gray)
         .onAppear {
             Task {
                 await viewModel.fetchBreeds()
