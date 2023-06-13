@@ -13,11 +13,11 @@ struct BreedListView: View {
     
     let twoColumnsGrid = [GridItem(.flexible()), GridItem(.flexible())]
     
-    var sortedBreeds: [Breed] {
+    var sortedBreeds: [DogBreed] {
         return viewModel.breeds.sorted { $0.name < $1.name }
     }
     
-    var filteredBreeds: [Breed] {
+    var filteredBreeds: [DogBreed] {
         if searchText.isEmpty {
             return sortedBreeds
         } else {

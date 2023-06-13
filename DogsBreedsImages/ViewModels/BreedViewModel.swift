@@ -4,7 +4,7 @@ import Combine
 import Alamofire
 
 class BreedViewModel: ObservableObject {
-    @Published var breeds: [Breed] = []
+    @Published var breeds: [DogBreed] = []
     private var cancellables: Set<AnyCancellable> = []
     
     func fetchBreeds() async {
@@ -12,7 +12,7 @@ class BreedViewModel: ObservableObject {
             do {
                 let breeds = try await DogAPI.shared.fetchBreeds()
                 DispatchQueue.main.async {
-                    self.breeds = breeds.map { Breed(name: $0) }
+                    self.breeds = breeds.map { DogBreed(name: $0) }
                     Task {
                         await self.fetchImages()
                     }
@@ -30,7 +30,12 @@ class BreedViewModel: ObservableObject {
                 do {
                     let imageURL = try await DogAPI.shared.getRandomImageURL(for: breed.name)
                     DispatchQueue.main.async {
-                        self.breeds[index].images.append(imageURL)
+                        if let breedIndex = self.breeds.firstIndex(where: { $0.id == breed.id }) {
+                            self.breeds[breedIndex].images.append(imageURL)
+                        } else {
+                            // Handle the case where the breed no longer exists in the breeds array
+                            print("Breed no longer exists: \(breed.name)")
+                        }
                     }
                 } catch {
                     print("Error fetching image for breed \(breed.name): \(error)")

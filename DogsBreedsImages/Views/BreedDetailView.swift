@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BreedDetailView: View {
-    let breed: Breed
+    let breed: DogBreed
     
     var body: some View {
         ScrollView {
@@ -32,6 +32,6 @@ struct BreedDetailView: View {
 
 struct BreedDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        BreedDetailView(breed: Breed(name: "Beagle"))
+        BreedDetailView(breed: DogBreed(name: "Beagle"))
     }
 }

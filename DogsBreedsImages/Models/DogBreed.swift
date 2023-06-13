@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Breed: Identifiable {
+struct DogBreed: Identifiable {
     let id = UUID()
     let name: String
     var images: [String] = []

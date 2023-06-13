@@ -41,7 +41,7 @@ struct ListItemView: View {
 
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
-        let sampleBreed = Breed(name: "Beagle", images: ["https://example.com/beagle.jpg"])
+        let sampleBreed = DogBreed(name: "Beagle", images: ["https://example.com/beagle.jpg"])
         return ListItemView(imageURL: sampleBreed.images.first ?? "", text: sampleBreed.name)
             .previewLayout(.fixed(width: 200, height: 200))
             .padding()
