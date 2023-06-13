@@ -23,7 +23,7 @@ class DogBreedViewModel: ObservableObject {
         }
     }
     
-    private func fetchImages() {
+    private func fetchImages() async {
         for index in breeds.indices {
             let breed = breeds[index]
             Task {
