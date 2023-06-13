@@ -7,10 +7,10 @@ class BreedViewModel: ObservableObject {
     @Published var breeds: [Breed] = []
     private var cancellables: Set<AnyCancellable> = []
     
-    func fetchBreeds() {
+    func fetchBreeds() async {
         Task {
             do {
-                let breeds = try await DogAPI.shared.getBreeds()
+                let breeds = try await DogAPI.shared.fetchBreeds()
                 DispatchQueue.main.async {
                     self.breeds = breeds.map { Breed(name: $0) }
                     Task {

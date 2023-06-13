@@ -20,7 +20,7 @@ struct DogAPI {
     
     private init() {}
     
-    func getBreeds() async throws -> [String] {
+    func fetchBreeds() async throws -> [String] {
         let url = URL(string: "\(baseURL)/breeds/list/all")!
         let (data, _) = try await URLSession.shared.data(from: url)
         let response = try JSONDecoder().decode(BreedsResponse.self, from: data)
