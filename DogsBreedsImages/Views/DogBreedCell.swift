@@ -29,7 +29,6 @@ struct DogBreedCell: View {
                 .foregroundColor(.white)
         }
         .padding(.vertical)
-        .frame(maxWidth: .infinity)
         .background(.cyan)
         .clipShape(RoundedRectangle(cornerRadius: 10))
         .overlay(
