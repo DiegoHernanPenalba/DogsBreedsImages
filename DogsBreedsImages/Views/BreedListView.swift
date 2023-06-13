@@ -34,7 +34,7 @@ struct BreedListView: View {
                 LazyVGrid(columns: twoColumnsGrid, spacing: 10) {
                     ForEach(filteredBreeds) { breed in
                         NavigationLink(destination: BreedDetailView(breed: breed)) {
-                            ListItemView(imageURL: breed.images.randomElement() ?? "", text: breed.name)
+                            DogBreedCell(imageURL: breed.images.randomElement() ?? "", text: breed.name)
                         }
                     }
                 }
