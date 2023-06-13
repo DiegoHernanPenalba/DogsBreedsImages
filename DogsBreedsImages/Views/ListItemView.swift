@@ -25,16 +25,16 @@ struct ListItemView: View {
             Text(text.capitalized)
                 .font(.subheadline)
                 .frame(maxWidth: .infinity, maxHeight:.infinity)
-                .background(Color.cyan)
+                .background(.cyan)
                 .foregroundColor(.white)
         }
         .padding(.vertical)
         .frame(maxWidth: .infinity)
-        .background(Color.cyan)
+        .background(.cyan)
         .clipShape(RoundedRectangle(cornerRadius: 10))
         .overlay(
             RoundedRectangle(cornerRadius: 10)
-                .stroke(Color.gray)
+                .stroke(.gray)
         )
     }
 }
