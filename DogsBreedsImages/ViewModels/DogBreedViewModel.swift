@@ -1,7 +1,6 @@
 import Foundation
 import SwiftUI
 import Combine
-import Alamofire
 
 enum DogBreedError: Error {
     case breedFetchFailed
