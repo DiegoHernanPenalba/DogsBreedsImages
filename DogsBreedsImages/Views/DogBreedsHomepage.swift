@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//TODO: homepage is a name from the web.
 struct DogBreedsHomepage: View {
     @StateObject private var viewModel = DogBreedViewModel()
     

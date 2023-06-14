@@ -14,6 +14,8 @@ struct DogBreedDetailView: View {
         ScrollView {
             VStack {
                 ForEach(breed.images, id: \.self) { imageURL in
+                    //TODO: why kingfisher elsewhere and not here?
+                    //TODO: food for thought: what happens if you keep adding kingfisher references everywhere and later we switch to another system? problems? solutions? 
                     AsyncImage(url: URL(string: imageURL)) { image in
                         image
                             .resizable()

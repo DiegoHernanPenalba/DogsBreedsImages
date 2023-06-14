@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DogBreedScrollableList: View {
+    //TODO: what is this comment?
     //@ObservedObject: maintain the observed behavior and trigger view updates when the viewModel object changes.
     @ObservedObject var viewModel: DogBreedViewModel
     @State private var searchText = ""
@@ -38,6 +39,7 @@ struct DogBreedScrollableList: View {
                             if let imageURL = breed.images.randomElement() {
                                 DogBreedCell(imageURL: imageURL, text: breed.name)
                             } else {
+                                //TODO: happens if you send "" ?
                                 DogBreedCell(imageURL: "", text: breed.name)
                             }
                         }
@@ -52,6 +54,7 @@ struct DogBreedScrollableList: View {
                 }
             }
         }
+        //TODO: Did you implement localization?
         .navigationBarTitle("Dog Breeds")
         .background(Color(UIColor.systemBackground))
         //By replacing the .onAppear modifier with .task, you are ensuring that the viewModel.fetchBreeds() function is called as a task when the view is created or reappeared. This allows the asynchronous fetch operation to be executed in a structured and controlled manner.
