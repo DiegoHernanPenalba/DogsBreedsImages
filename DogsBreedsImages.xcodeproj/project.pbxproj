@@ -19,6 +19,7 @@
 		721069562A2EA0FE009F4D0F /* DogBreedDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721069552A2EA0FE009F4D0F /* DogBreedDetailView.swift */; };
 		7275AA632A3777F300776C06 /* DogBreedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7275AA622A3777F300776C06 /* DogBreedCell.swift */; };
 		72F2D53E2A2F787900645DE2 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F2D53D2A2F787900645DE2 /* SearchBar.swift */; };
+		72FD157C2A3A138A00548B7C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 72FD157B2A3A138A00548B7C /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72FD157C2A3A138A00548B7C /* Kingfisher in Frameworks */,
 				721069502A2EA059009F4D0F /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +142,7 @@
 			name = DogsBreedsImages;
 			packageProductDependencies = (
 				7210694F2A2EA059009F4D0F /* Alamofire */,
+				72FD157B2A3A138A00548B7C /* Kingfisher */,
 			);
 			productName = DogsBreedsImages;
 			productReference = 721069352A2E9F80009F4D0F /* DogsBreedsImages.app */;
@@ -171,6 +174,7 @@
 			mainGroup = 7210692C2A2E9F80009F4D0F;
 			packageReferences = (
 				7210694E2A2EA059009F4D0F /* XCRemoteSwiftPackageReference "Alamofire" */,
+				72FD157A2A3A138A00548B7C /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 721069362A2E9F80009F4D0F /* Products */;
 			projectDirPath = "";
@@ -417,6 +421,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		72FD157A2A3A138A00548B7C /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -424,6 +436,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7210694E2A2EA059009F4D0F /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		72FD157B2A3A138A00548B7C /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72FD157A2A3A138A00548B7C /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
