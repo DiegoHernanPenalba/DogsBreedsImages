@@ -1,5 +1,5 @@
 //
-//  BreedDetailView.swift
+//  DogBreedDetailView.swift
 //  DogsBreedsImages
 //
 //  Created by Diego Hernan Peñalba on 05/06/2023.

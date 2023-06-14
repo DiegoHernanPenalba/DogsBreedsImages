@@ -1,5 +1,5 @@
 //
-//  DogApi.swift
+//  DogBreedsAPI.swift
 //  DogsBreedsImages
 //
 //  Created by Diego Hernan Peñalba on 05/06/2023.
@@ -23,7 +23,7 @@ struct DogBreedsAPI {
     func fetchBreeds() async throws -> [String] {
         let url = URL(string: "\(baseURL)/breeds/list/all")!
         let (data, _) = try await URLSession.shared.data(from: url)
-        let response = try JSONDecoder().decode(BreedsResponse.self, from: data)
+        let response = try JSONDecoder().decode(DogBreedsResponse.self, from: data)
         return Array(response.message.keys)
     }
     
@@ -35,7 +35,7 @@ struct DogBreedsAPI {
     }
 }
 
-struct BreedsResponse: Codable {
+struct DogBreedsResponse: Codable {
     let message: [String: [String]]
 }
 
