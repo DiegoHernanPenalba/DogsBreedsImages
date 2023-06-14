@@ -52,14 +52,14 @@ class DogBreedViewModel: ObservableObject {
             case DogBreedError.imageFetchFailed:
                 errorMessage = "Error fetching image for breed \(breed.name)"
             default:
-                errorMessage = "An unknown error occurred"
+                errorMessage = "An unknown error occurred fetching images"
             }
         } else {
             switch error {
             case DogBreedError.breedFetchFailed:
                 errorMessage = "Error fetching breeds"
             default:
-                errorMessage = "An unknown error occurred"
+                errorMessage = "An unknown error occurred fetching breeds"
             }
         }
     }
