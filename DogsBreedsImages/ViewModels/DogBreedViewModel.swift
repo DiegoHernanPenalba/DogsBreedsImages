@@ -42,6 +42,7 @@ class DogBreedViewModel: ObservableObject {
         for index in breeds.indices {
             let breed = breeds[index]
             //TODO: what happens if the first getRandomImage takes a loooooot of time?
+            //Respopnse: It will freeze the UI. I will search for a better practice
             let imageURL = try await DogBreedsAPI.shared.getRandomImageURL(for: breed.name)
             DispatchQueue.main.async { [weak self] in
                 //This guard let statement Is used because you once told me it was a good practice.

@@ -39,6 +39,7 @@ struct DogBreedScrollableList: View {
                                 DogBreedCell(imageURL: imageURL, text: breed.name)
                             } else {
                                 //TODO: happens if you send "" ?
+                                //Response: Nothing will be shown, it will remain the placeholder on the DogBreedCell.
                                 DogBreedCell(imageURL: "", text: breed.name)
                             }
                         }
@@ -54,6 +55,7 @@ struct DogBreedScrollableList: View {
             }
         }
         //TODO: Did you implement localization?
+        //Response: No, because I didnt thought of that. The content of the date is mostly proper nouns.
         .navigationBarTitle("Dog Breeds")
         .background(Color(UIColor.systemBackground))
         //By replacing the .onAppear modifier with .task, you are ensuring that the viewModel.fetchBreeds() function is called as a task when the view is created or reappeared. This allows the asynchronous fetch operation to be executed in a structured and controlled manner.
