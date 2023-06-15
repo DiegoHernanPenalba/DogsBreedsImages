@@ -6,8 +6,6 @@ class DogBreedViewModel: ObservableObject {
     @Published var breeds: [DogBreed] = []
     @Published var errorMessage: String?
     
-    private var cancellables: Set<AnyCancellable> = []
-    
     // TODO: Is this a DogBreedError, or a DogBreedViewModel.Error? You can embed it in the VM too
     enum DogBreedViewModelError: Error {
         case breedFetchFailed
