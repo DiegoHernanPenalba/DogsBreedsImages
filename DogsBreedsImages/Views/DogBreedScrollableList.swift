@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct DogBreedScrollableList: View {
-    //TODO: what is this comment?
-    //@ObservedObject: maintain the observed behavior and trigger view updates when the viewModel object changes.
+    
     @ObservedObject var viewModel: DogBreedViewModel
     @State private var searchText = ""
     
