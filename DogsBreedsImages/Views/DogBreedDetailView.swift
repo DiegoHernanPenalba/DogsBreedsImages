@@ -15,7 +15,9 @@ struct DogBreedDetailView: View {
             VStack {
                 ForEach(breed.images, id: \.self) { imageURL in
                     //TODO: why kingfisher elsewhere and not here?
-                    //TODO: food for thought: what happens if you keep adding kingfisher references everywhere and later we switch to another system? problems? solutions? 
+                    //Response: I didnt though of it, because I didnt have any issue with the UI.
+                    //TODO: food for thought: what happens if you keep adding kingfisher references everywhere and later we switch to another system? problems? solutions?
+                    //Response: If we later switch to another system the code mantenance wolud be harder, so based on OPP principles a good solution would be to encapsulate the kingsfisher functionality
                     AsyncImage(url: URL(string: imageURL)) { image in
                         image
                             .resizable()
