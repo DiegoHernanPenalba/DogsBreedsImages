@@ -1,5 +1,5 @@
 //
-//  DogBreedsHomepage.swift
+//  DogBreedsMainView.swift
 //  DogsBreedsImages
 //
 //  Created by Diego Hernan Peñalba on 05/06/2023.
@@ -8,7 +8,8 @@
 import SwiftUI
 
 //TODO: homepage is a name from the web.
-struct DogBreedsHomepage: View {
+
+struct DogBreedsMainView: View {
     @StateObject private var viewModel = DogBreedViewModel()
     
     var body: some View {
@@ -20,6 +21,6 @@ struct DogBreedsHomepage: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        DogBreedsHomepage()
+        DogBreedsMainView()
     }
 }
