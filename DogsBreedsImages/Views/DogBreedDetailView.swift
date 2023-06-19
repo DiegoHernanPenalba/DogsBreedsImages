@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct DogBreedDetailView: View {
+    
+    @Environment(\.colorScheme) var colorScheme
+    
     let breed: DogBreed
     
     var body: some View {
@@ -30,7 +33,7 @@ struct DogBreedDetailView: View {
             }
         }
         .navigationTitle(breed.name.capitalized)
-        .background(Color(.tertiarySystemBackground))
+        .background(colorScheme == .dark ? Color.black : Color.cyan)
     }
 }
 

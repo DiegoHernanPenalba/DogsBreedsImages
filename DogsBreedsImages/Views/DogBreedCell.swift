@@ -9,6 +9,9 @@ import Kingfisher
 import SwiftUI
 
 struct DogBreedCell: View {
+    
+    @Environment(\.colorScheme) var colorScheme
+    
     let imageURL: String?
     let text: String
     
@@ -33,15 +36,15 @@ struct DogBreedCell: View {
             Text(text.capitalized)
                 .font(.subheadline)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color(UIColor.systemGray))
-                .foregroundColor(.white)
+                .background(colorScheme == .dark ? Color(UIColor.gray) : Color(UIColor.systemGray5))
+                .foregroundColor(colorScheme == .dark ? Color(UIColor.white) : Color(UIColor.black))
         }
         .padding(.vertical)
-        .background(Color(UIColor.systemGray))
+        .background(colorScheme == .dark ? Color(UIColor.gray) : Color(UIColor.systemGray5))
         .clipShape(RoundedRectangle(cornerRadius: 10))
         .overlay(
             RoundedRectangle(cornerRadius: 10)
-                .stroke(Color(UIColor.white))
+                .stroke(colorScheme == .dark ? Color(UIColor.white) : Color(UIColor.black))
         )
     }
 }
