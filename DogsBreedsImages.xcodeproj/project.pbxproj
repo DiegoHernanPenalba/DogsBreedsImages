@@ -20,6 +20,7 @@
 		7275AA632A3777F300776C06 /* DogBreedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7275AA622A3777F300776C06 /* DogBreedCell.swift */; };
 		72F2D53E2A2F787900645DE2 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F2D53D2A2F787900645DE2 /* SearchBar.swift */; };
 		72FD157C2A3A138A00548B7C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 72FD157B2A3A138A00548B7C /* Kingfisher */; };
+		72FD157F2A40C53200548B7C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72FD15812A40C53200548B7C /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		721069552A2EA0FE009F4D0F /* DogBreedDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreedDetailView.swift; sourceTree = "<group>"; };
 		7275AA622A3777F300776C06 /* DogBreedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreedCell.swift; sourceTree = "<group>"; };
 		72F2D53D2A2F787900645DE2 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		72FD15802A40C53200548B7C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		72FD15822A40C53F00548B7C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +56,7 @@
 		7210692C2A2E9F80009F4D0F = {
 			isa = PBXGroup;
 			children = (
+				72FD15812A40C53200548B7C /* Localizable.strings */,
 				721069372A2E9F80009F4D0F /* DogsBreedsImages */,
 				721069362A2E9F80009F4D0F /* Products */,
 			);
@@ -170,6 +174,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 7210692C2A2E9F80009F4D0F;
 			packageReferences = (
@@ -191,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				721069402A2E9F81009F4D0F /* Preview Assets.xcassets in Resources */,
+				72FD157F2A40C53200548B7C /* Localizable.strings in Resources */,
 				7210693D2A2E9F81009F4D0F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,6 +221,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		72FD15812A40C53200548B7C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72FD15802A40C53200548B7C /* en */,
+				72FD15822A40C53F00548B7C /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		721069412A2E9F81009F4D0F /* Debug */ = {

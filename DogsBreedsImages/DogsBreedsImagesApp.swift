@@ -12,6 +12,7 @@ struct DogsBreedsImagesApp: App {
     var body: some Scene {
         WindowGroup {
             DogBreedsMainView()
+                .environment(\.locale, .init(identifier: "es"))
         }
     }
 }
