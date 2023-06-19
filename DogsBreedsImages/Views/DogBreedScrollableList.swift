@@ -57,7 +57,7 @@ struct DogBreedScrollableList: View {
             }
         }
         //TODO: Did you implement localization?
-        //Response: No, because I didnt thought of that. The content of the date is mostly proper nouns.
+        //Response: No, because I didnt thought of that. The content of the data is mostly proper nouns.
         .navigationBarTitle("Dog Breeds")
         .background(colorScheme == .dark ? Color.black : Color.cyan)
         //By replacing the .onAppear modifier with .task, you are ensuring that the viewModel.fetchBreeds() function is called as a task when the view is created or reappeared. This allows the asynchronous fetch operation to be executed in a structured and controlled manner.
