@@ -11,7 +11,8 @@ import SwiftUI
 struct DogsBreedsImagesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DogBreedsMainView()
+                .environment(\.locale, .init(identifier: "es"))
         }
     }
 }

@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  DogBreedsMainView.swift
 //  DogsBreedsImages
 //
 //  Created by Diego Hernan Peñalba on 05/06/2023.
@@ -7,18 +7,20 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    @StateObject private var viewModel = BreedViewModel()
+//TODO: homepage is a name from the web.
+
+struct DogBreedsMainView: View {
+    @StateObject private var viewModel = DogBreedViewModel()
     
     var body: some View {
         NavigationView {
-            BreedListView(viewModel: viewModel)
+            DogBreedScrollableList(viewModel: viewModel)
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        DogBreedsMainView()
     }
 }
